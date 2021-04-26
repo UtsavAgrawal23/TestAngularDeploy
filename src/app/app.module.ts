@@ -14,13 +14,17 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
+import  {AdminModule} from './admin/admin.module';
 
+import {AuthModule} from './auth/auth.module';
 @NgModule({
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    AdminModule,
+    AuthModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
